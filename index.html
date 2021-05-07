@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html>
-    <script src="js/amazon-chime-sdk.min.js"></script>
+<html lang="ja">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>chime study page</title>
     </head>
     <body>
-        hogehoge
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js" integrity="sha512-LF8ZB1iTwi4Qvkm4pekHG4a437Y9Af5ZuwbnW4GTbAWQeR2E4KW8WF+xH8b9psevV7wIlDMx1MH9YfPqgKhA/Q==" crossorigin="anonymous"></script>
+        <script src="js/amazon-chime-sdk.min.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/datgui.js"></script>
+        <script src="js/chime.js"></script>
+        <p id="init">
+            <label>
+                Room Name
+                <input id='inputForm' type='text'>
+            </label>
+            <button id="initButton">init</button>
+        </p>
+        <p><textarea id="meetingInfo" placeholder="Meeting" rows="10" cols="100"></textarea></p>
+        <p><textarea id="attendeeInfo" placeholder="Attendee" rows="10" cols="100"></textarea></p>
+        <p><button id="joinButton">Join</button></p>
+        <p><button id="leaveButton">Leave</button></p>
+        <audio id="audio-input"></audio>
+        <div id="video-list"></div>
+        <canvas id="three-canvas"></canvas>
     </body>
 </html>
